@@ -14,9 +14,10 @@ vim.keymap.set("v", "<space>x", ":lua<CR>")
 
 -- Highlight when yanking
 vim.api.nvim_create_autocmd('TextYankPost', {
-    desc = 'Highlight when yanking text',
-    group = vim.api.nvim_create_augroup('cs-highlight-yank', { clear = true }),
-    callback = function()
-	vim.highlight.on_yank()
-    end,
+  desc = 'Highlight when yanking text',
+  group = vim.api.nvim_create_augroup('cs-highlight-yank', { clear = true }),
+  callback = function()
+    vim.highlight.on_yank()
+  end,
 })
+

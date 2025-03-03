@@ -5,6 +5,7 @@ require("config.lazy")
 vim.opt.shiftwidth = 4
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.signcolumn = "yes:1"
 --TODO: clipboard set
 --vim.opt.clipboard = "unnamedplus"
 vim.diagnostic.enable()

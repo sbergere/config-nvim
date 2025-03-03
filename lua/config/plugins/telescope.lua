@@ -19,6 +19,7 @@ return {
       }
 
       require('telescope').load_extension('fzf')
+
       local builtin = require('telescope.builtin')
       vim.keymap.set('n', '<space>ff', builtin.find_files, { desc = 'Telescope find files' })
       vim.keymap.set('n', '<space>fg', builtin.live_grep, { desc = 'Telescope live grep' })
@@ -29,6 +30,13 @@ return {
           cwd = vim.fn.stdpath("config")
         }
       end, { desc = 'Edit Neovim config files' })
+      vim.keymap.set('n', '<space>ep', function()
+        builtin.find_files {
+          cwd = vim.fs.joinpath(vim.fn.stdpath('data'), 'lazy')
+        }
+      end, { desc = 'Search plugins files' })
+
+      require 'config.telescope.multigrep'.setup()
     end
   }
 }

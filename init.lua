@@ -17,7 +17,7 @@ vim.keymap.set("n", "<space>f", function() vim.lsp.buf.format() end)
 
 vim.keymap.set("n", "<M-j>", "<cmd>cnext<CR>")
 vim.keymap.set("n", "<M-k>", "<cmd>cprev<CR>")
-
+vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
 
 -- Highlight when yanking
 vim.api.nvim_create_autocmd('TextYankPost', {

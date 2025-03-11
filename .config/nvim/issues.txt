@@ -1,0 +1,4 @@
+Nvim unresponsive when entering commands with "!" in command mode.
+Linked to: https://github.com/hrsh7th/cmp-cmdline/issues/112
+Can be tested using: ```:lua = vim.fn.getcompletion("!", "cmdline")```
+Probably due to WSL.
